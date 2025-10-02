@@ -17,6 +17,7 @@ dependencies:
   super_native_extensions:
     git:
       url: git@github.com:ginlo2/super_native_extensions.git
+      path: super_native_extensions
       ref: ginlo
 dev_dependencies:
   flutter_test:
