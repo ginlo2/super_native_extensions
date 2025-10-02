@@ -10,8 +10,16 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
-  super_native_extensions: ^0.9.1
-  super_keyboard_layout: ^0.9.1
+  super_native_extensions:
+    git:
+      url: git@github.com:ginlo2/super_native_extensions.git
+      path: super_native_extensions
+      ref: ginlo
+  super_keyboard_layout:
+    git:
+      url: git@github.com:ginlo2/super_native_extensions.git
+      path: super_keyboard_layout
+      ref: ginlo
 dev_dependencies:
   flutter_test:
     sdk: flutter
