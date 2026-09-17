@@ -8,7 +8,7 @@ buildscript {
     }
 
     dependencies {
-        classpath 'com.android.tools.build:gradle:7.4.2'
+        classpath 'com.android.tools.build:gradle:9.1.0'
     }
 }
 
@@ -22,11 +22,9 @@ rootProject.allprojects {
 apply plugin: 'com.android.library'
 
 android {
-    if (project.android.hasProperty("namespace")) {
-        namespace 'com.superlist.super_native_extensions'
-    }
+    namespace 'com.superlist.super_native_extensions'
 
-    compileSdkVersion 36
+    compileSdk = 36
 
     compileOptions {
         sourceCompatibility JavaVersion.VERSION_17
@@ -34,14 +32,6 @@ android {
     }
 
     defaultConfig {
-        minSdkVersion 23
+        minSdk = 24
     }
-}
-
-
-apply from: "../cargokit/gradle/plugin.gradle"
-
-cargokit {
-    manifestDir = "../rust"
-    libname = "super_native_extensions"
 }
